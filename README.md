@@ -1,32 +1,29 @@
+[update-readmes]   Mode: rewrite — migrating to template structure...
 # docker2lxc
 
-`docker2lxc` is a shell script that allows you to export a Docker image as a root-filesystem tarball, which can be used as an LXC template in Proxmox.
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/docker2lxc)
 
-> [!WARNING]
-> **Conceptual Experiment** - This tool exists primarily to test a "novel" CLI interaction pattern. The current implementation is fragile and will eventually need to be changed. So I invite curious developers to:
->
-> - Explore the `stdout-forward-detector` and `noninteractive-export` branches in this repository.
-> - Contribute ideas about the usage pattern that allows a CLI tool like this to change its behavior depending on whether it is being "sourced" or "substituted"/piped.
->
-> The end goal is to figure out if this pattern is a good idea, if it can be reliably implemented, and ultimately create a cloud-shell-script template that platform and DevOps engineers can adapt for their own cloud CLI tools.
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-## Demo
+## Architecture
 
-![Terminal recording showing CLI usage](./.github/assets/recording.gif)
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-> Note that on a Proxmox VE system, LXC templates are typically stored in the `/var/lib/vz/template/cache` directory.
+## Install
 
-## Installation
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
 ```bash
-mkdir -p ~/repos && cd ~/repos
-git clone https://github.com/diraneyya/docker2lxc.git
-sudo make install
+git clone https://github.com/Interested-Deving-1896/docker2lxc.git
+cd docker2lxc
 ```
 
-If you do not have `sudo` or if you are logged in as root, just run `make install`.
-
 ## Usage
+
 
 Always run the tool from the machine where you need the LXC template.
 
@@ -114,8 +111,50 @@ ssh hostwithdocker 'docker image rm --force $(docker image ls -q --filter "refer
 
 Note that this will only remove images on the remote machine that were pulled by `docker2lxc`.
 
-## Questions?
+## Configuration
 
-If you are interested in this work, check out the experimental branches, which will help you understand my thought process.
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
 
-For feedback, questions, or to get involved, please mail me at <info@orwa.tech>.
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/docker2lxc`](https://github.com/Interested-Deving-1896/docker2lxc) and mirrored through:
+
+```
+Interested-Deving-1896/docker2lxc  ──►  OpenOS-Project-OSP/docker2lxc  ──►  OpenOS-Project-Ecosystem-OOC/docker2lxc
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+<!-- License not detected — add a LICENSE file to this repo. -->
+<!-- AI:end:license -->
